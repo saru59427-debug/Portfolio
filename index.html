@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Professional Software Engineering Portfolio of Sarujan Marianesan, a passionate Software Engineering Undergraduate with hands-on software development and systems troubleshooting experience." />
+  <meta name="keywords"
+    content="Sarujan Marianesan, Software Engineer, Portfolio, Java Developer, Web Developer, Cardiff Metropolitan University, ICBT, Jaffna, Sri Lanka, C++ Developer" />
+  <meta name="author" content="Sarujan Marianesan" />
+  <title>Sarujan Marianesan | Software Engineering Portfolio</title>
+
+  <!-- Open Graph / Social Cards Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sarujan Marianesan | Software Engineering Portfolio" />
+  <meta property="og:description"
+    content="Explore the projects, education, skills, and experience of Sarujan Marianesan, Software Engineering Undergraduate." />
+  <meta property="og:image" content="image/saru.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="image/favicon_circle.png" />
+
+  <!-- Core Stylesheets: Bootstrap 5, Font Awesome, AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Immediate Theme Initialization to prevent flashing -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('portfolio-theme-customizer');
+        if (saved) {
+          var settings = JSON.parse(saved);
+          if (settings.theme === 'light') {
+            document.body.classList.add('theme-light');
+            document.body.classList.remove('theme-dark');
+            document.body.style.background = settings.bgGradient || '#F8FAFC';
+          } else {
+            document.body.classList.add('theme-dark');
+            document.body.classList.remove('theme-light');
+          }
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <!-- Background Glowing Blobs -->
+  <div class="bg-glow-container">
+    <div class="bg-glow-circle bg-glow-1"></div>
+    <div class="bg-glow-circle bg-glow-2"></div>
+    <div class="bg-glow-circle bg-glow-3"></div>
+  </div>
+
+  <!-- Loading Preloader Screen -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader-logo">Sarujan</div>
+      <div class="loader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- Reading Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ==========================================
+     1. NAVIGATION BAR
+     ========================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-portfolio">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-logo" href="index.html" id="navLogo">Sarujan<span>.dev</span></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="education.html">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="skills.html">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="experience.html">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+     2. HERO SECTION
+     ========================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Content -->
+        <div class="col-lg-7 text-start" data-aos="fade-right">
+          <span class="hero-subtitle">Hello, I'm</span>
+          <h1 class="hero-title">
+            <span>SARUJAN</span><br />
+            <span class="text-white">MARIANESAN</span>
+          </h1>
+          <div class="hero-typed-container">
+            <span class="hero-typed-text"></span>
+          </div>
+          <p class="hero-desc">
+            Passionate Software Engineering Undergraduate with hands-on
+            experience in software development, web technologies, and computer
+            troubleshooting. Dedicated to building innovative solutions and
+            continuously improving technical expertise.
+          </p>
+          <div class="hero-buttons-group d-flex flex-wrap gap-3 mb-5">
+            <a href="pdf/sarucv.pdf" class="btn-premium btn-primary-gradient" download>
+              <i class="fas fa-download"></i> Download CV
+            </a>
+            <a href="projects.html" class="btn-premium btn-primary-gradient">
+              <i class="fas fa-project-diagram"></i> View Projects
+            </a>
+            <a href="contact.html" class="btn-premium btn-primary-gradient">
+              <i class="fas fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+          <div class="social-icons-container d-none d-lg-flex">
+            <a href="https://linkedin.com/in/sarujan-marianesan" target="_blank" class="social-icon-btn linkedin-hover"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saru59427@gmail.com" target="_blank" class="social-icon-btn email-hover" aria-label="Email">
+              <i class="far fa-envelope"></i>
+            </a>
+            <a href="https://github.com/saru59427-debug" target="_blank" class="social-icon-btn github-hover" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://wa.me/94754844301" target="_blank" class="social-icon-btn phone-hover" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Image -->
+        <div class="col-lg-5 mt-5 mt-lg-0 text-center" data-aos="fade-left">
+          <div class="hero-image-wrapper">
+            <div class="profile-glow-ring"></div>
+            <div class="hero-profile-container">
+              <img src="image/saru.png" alt="Sarujan Marianesan Profile Photo" class="hero-profile-img" />
+            </div>
+            <!-- Dynamic tech-badges floating -->
+            <div class="hero-tech-elements">
+              <div class="tech-badge tech-badge-java">
+                <i class="fab fa-java"></i> Java
+              </div>
+              <div class="tech-badge tech-badge-cpp">
+                <i class="fas fa-code"></i> C++
+              </div>
+              <div class="tech-badge tech-badge-web">
+                <i class="fab fa-js"></i> Web Dev
+              </div>
+              <div class="tech-badge tech-badge-database">
+                <i class="fas fa-database"></i> SQL
+              </div>
+            </div>
+          </div>
+          <!-- Mobile Social Icons (displayed under the profile image) -->
+          <div class="social-icons-container d-flex d-lg-none mt-4 justify-content-center" data-aos="fade-up"
+            data-aos-delay="200">
+            <a href="https://linkedin.com/in/sarujan-marianesan" target="_blank" class="social-icon-btn linkedin-hover"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saru59427@gmail.com" target="_blank" class="social-icon-btn email-hover" aria-label="Email">
+              <i class="far fa-envelope"></i>
+            </a>
+            <a href="https://github.com/saru59427-debug" target="_blank" class="social-icon-btn github-hover" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://wa.me/94754844301" target="_blank" class="social-icon-btn phone-hover" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     3. ACHIEVEMENTS SECTION (STATS)
+     ========================================== -->
+  <section class="achievements-section d-none d-md-block">
+    <div class="container">
+      <div class="row g-2 g-md-4 justify-content-center">
+        <!-- Stat item 1 -->
+        <div class="col-3 col-md-3">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="stat-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="stat-number" id="stat-projects" data-target="4">
+              0
+            </div>
+            <div class="stat-label">Academic Projects</div>
+          </div>
+        </div>
+
+        <!-- Stat item 2 -->
+        <div class="col-3 col-md-3">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="stat-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="stat-number" id="stat-tech" data-target="8" data-suffix="+">
+              0
+            </div>
+            <div class="stat-label">Tech Utilities</div>
+          </div>
+        </div>
+
+        <!-- Stat item 3 -->
+        <div class="col-3 col-md-3">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="250">
+            <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="stat-number" id="stat-hd" data-target="1" data-suffix="st">
+              0
+            </div>
+            <div class="stat-label">HD Candidate</div>
+          </div>
+        </div>
+
+        <!-- Stat item 4 -->
+        <div class="col-3 col-md-3">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="350">
+            <div class="stat-icon"><i class="fas fa-wrench"></i></div>
+            <div class="stat-number" id="stat-hardware" data-target="3" data-suffix="+">
+              0
+            </div>
+            <div class="stat-label">Hardware Utilities</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     4. FOOTER
+     ========================================== -->
+  <footer class="footer-portfolio">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <!-- Logo and details -->
+        <div class="col-md-6 text-start">
+          <a href="index.html" class="footer-logo">Sarujan<span>.dev</span></a>
+          <p class="footer-desc mb-0">
+            Software Engineering Portfolio of Sarujan Marianesan.<br />Building
+            responsive codebases and engineering performant solutions.
+          </p>
+        </div>
+        <!-- Quick links -->
+        <div class="col-6 col-md-3 text-start">
+          <h5 class="footer-section-title">Quick Links</h5>
+          <ul class="footer-links-list">
+            <li>
+              <a href="index.html"><i class="fas fa-angle-right me-2"></i>Home</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-angle-right me-2"></i>About</a>
+            </li>
+            <li>
+              <a href="projects.html"><i class="fas fa-angle-right me-2"></i>Projects</a>
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-angle-right me-2"></i>Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Social connects -->
+        <div class="col-6 col-md-3 text-start">
+          <h5 class="footer-section-title">Connect</h5>
+          <ul class="footer-links-list">
+            <li>
+              <a href="https://linkedin.com/in/sarujan-marianesan" target="_blank"><i
+                  class="fab fa-linkedin-in me-2"></i>LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://github.com/saru59427-debug" target="_blank"><i class="fab fa-github me-2"></i>GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Copyright bottom -->
+      <div class="footer-bottom text-center">
+        <p class="copyright-text">
+          &copy; 2026 Sarujan Marianesan. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button id="scrollTopBtn" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript Libraries & Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
