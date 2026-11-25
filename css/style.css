@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap');
 
 /* ==========================================
    DESIGN VARIABLES & GLOBAL STYLES
@@ -203,6 +202,7 @@ section {
   font-weight: 800;
   background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent-pink));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
   animation: pulse 1.5s infinite;
@@ -328,6 +328,7 @@ section {
   font-size: 1.9rem;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -1.5px;
 }
@@ -433,6 +434,7 @@ section {
 .hero-title span {
   background: linear-gradient(135deg, var(--text-primary) 50%, var(--text-muted));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -455,6 +457,7 @@ section {
   color: var(--primary);
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1009,6 +1012,7 @@ section {
   margin-bottom: 12px;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: var(--transition-smooth);
 }
@@ -1017,6 +1021,7 @@ section {
   transform: scale(1.18) rotate(3deg);
   background: linear-gradient(135deg, var(--primary), var(--accent-purple));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1247,6 +1252,7 @@ section {
   margin-bottom: 15px;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1257,6 +1263,7 @@ section {
   margin-bottom: 8px;
   background: linear-gradient(135deg, var(--text-primary), var(--text-muted));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1447,6 +1454,7 @@ section {
   font-size: 2.3rem;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   margin-bottom: 20px;
