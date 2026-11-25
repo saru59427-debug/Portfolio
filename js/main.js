@@ -94,22 +94,22 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================== */
   const preloader = document.getElementById('preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.style.opacity = '0';
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 500);
-    });
-
-    // Fallback: hide preloader after 3 seconds in case load event takes too long
-    setTimeout(() => {
+    const hidePreloader = () => {
       if (preloader.style.display !== 'none') {
         preloader.style.opacity = '0';
         setTimeout(() => {
           preloader.style.display = 'none';
-        }, 500);
+        }, 300);
       }
-    }, 3000);
+    };
+
+    if (document.readyState === 'complete') {
+      hidePreloader();
+    } else {
+      window.addEventListener('load', hidePreloader, { once: true });
+      // Fast fallback: never trap user behind preloader longer than 800ms
+      setTimeout(hidePreloader, 800);
+    }
   }
 
   /* ==========================================
@@ -132,27 +132,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  let ticking = false;
   const handleScroll = () => {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    
-    // 2.2 Update Reading Progress Bar
-    if (scrollProgress && docHeight > 0) {
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      scrollProgress.style.width = `${scrollPercent}%`;
-    }
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        
+        // 2.2 Update Reading Progress Bar
+        if (scrollProgress && docHeight > 0) {
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          scrollProgress.style.width = `${scrollPercent}%`;
+        }
 
-    // 2.3 Sticky Navbar styling
-    if (navbar) {
-      if (scrollTop > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+        // 2.3 Sticky Navbar styling
+        if (navbar) {
+          if (scrollTop > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        }
+
+        // Scroll to top button toggle
+        if (scrollTopBtn) {
+          if (scrollTop > 300) {
+            scrollTopBtn.classList.add('show');
+          } else {
+            scrollTopBtn.classList.remove('show');
+          }
+        }
+
+        ticking = false;
+      });
+      ticking = true;
     }
   };
 
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('scroll', handleScroll, { passive: true });
   // Run on page load to set correct initial states
   handleScroll();
 
@@ -385,16 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================
      8. SCROLL TO TOP BUTTON BEHAVIOR
      ========================================== */
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
   if (scrollTopBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        scrollTopBtn.classList.add('show');
-      } else {
-        scrollTopBtn.classList.remove('show');
-      }
-    });
-
     scrollTopBtn.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
